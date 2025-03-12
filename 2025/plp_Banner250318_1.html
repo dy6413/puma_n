@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">
+
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%; display:block;}
+        div{line-height:1.5;}
+
+        .plp_wrap{
+            position: relative;
+        }
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .video_wrap{
+            position: relative;
+            padding-top: 45.35%;
+            width: 100%;
+            height: 0;
+        }
+
+        .video_wrap video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video_wrap2{
+            position: relative;
+            /* padding-top: 45.35%; */
+            padding-top: 56.25%;
+            width: 100%;
+            height: 0;
+        }
+
+        .video_wrap2 video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main_banner_txt{
+            position: relative;
+            text-align: center;
+            max-width:900px;
+            margin:6.5rem auto 0 auto;
+            color:#111;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt_last{ margin-bottom:0;}
+
+        .main_banner_txt h1{
+            font-size:2.8rem;
+            font-weight:600;
+            line-height:2.8rem;
+        }
+        .main_banner_txt p{
+            font-size:1.4rem;
+            font-weight:500;
+            line-height:2.4rem;
+            padding:3.9rem 0 4rem 0;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt span{
+            font-size:1.3rem;
+            font-weight:600;
+            line-height:1.3rem;
+        }        
+        .main_banner_txt .main_banner_btn a{
+            display:inline-block;
+            font-size:1rem;
+            color:#fff;
+            font-weight:400;
+            padding:0.8rem 1.8rem;
+            background:#111;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .main_banner_txt .main_banner_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.bl a{
+            background:#111;
+            color:#fff;
+        }
+
+        .main_banner_txt .main_banner_btn.bl a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.wh a{
+            background:#fff;
+            color:#111;
+        }
+
+        .main_banner_txt .main_banner_btn.wh a:hover{
+            background:rgba(255,255,255,0.8);
+        }
+
+        .kop-overlap-container{display:none !important;}
+
+        .contents_rel{position: relative;}
+        .contents01_line{
+            text-align: center; width:100%; 
+            overflow: hidden;
+            margin:1rem auto 2rem auto;
+            font-size:0.39vw;
+        }
+
+            .contents01_line h2{
+                font-size:calc(40em / 7.5);
+                font-weight:600;
+                text-align: center;
+                line-height:calc(10em / 7.5);
+                position: relative;
+                letter-spacing: 5px;
+            }          
+
+            .contents01_line h2::before{
+                content:'';
+                display:block;
+                border:2px solid #111;
+                width:100%;
+                height:auto;
+                position:absolute;
+                left:-10%;
+                top:50%;
+                transform:translate(-50%,-50%);
+            }
+
+            .contents01_line h2::after{
+                content:'';
+                display:block;
+                border:2px solid #111;
+                width:100%;
+                height:auto;
+                position:absolute;
+                left:110%;
+                top:50%;
+                transform:translate(-50%,-50%);
+            }            
+            .nav_list{display:flex; margin:0 0 10% 0; justify-content: center;}
+            .buy_btn .link{position:absolute; text-indent:-9999px;}
+            .contents_ad02{margin:0 0 5% 0;}
+            .contents_ad01 .buy_btn .link01{
+                left: 37%;
+                top: 94%;
+                width: 27%;
+                height: 5.9%;                              
+            }
+            .contents_ad02 .buy_btn .link01{
+                left: 37%;
+                top: 94%;
+                width: 27%;
+                height: 5.9%;                              
+            }            
+
+            .nav_btn a p {text-indent: -9999px;}
+
+        .pc{display:block;}
+        .mo{display:none;}
+
+            @media(max-width:780px){
+                .pc{display:none;}
+                .mo{display:block;}            
+                .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+                .video_wrap{
+                    padding-top:141.75%;
+                }
+
+                .video_wrap2{
+                    /* padding-top:141.75%; */
+                    padding-top:177.75%;
+                }        
+
+                .main_banner_txt{
+                    margin:calc(90em / 7.5) auto calc(10em / 7.5) auto;
+                    padding:0 calc(20em / 7.5);
+                }
+                .main_banner_txt_last{
+                    margin:calc(55em / 7.5) auto calc(50em / 7.5) auto;
+                }
+
+                .main_banner_txt h1{
+                    font-size:calc(44em / 7.5);
+                    line-height:calc(10em / 7.5);
+                }
+                .main_banner_txt p{
+                    font-size:calc(22em / 7.5);
+                    padding:calc(8em / 7.5) 0 calc(20em / 7.5) 0;
+                    line-height: calc(11em / 7.5);
+                    letter-spacing: -1px;
+                }
+                .main_banner_txt h1 em{
+                    display:block;
+                }
+
+                .main_banner_txt p em{
+                    display:block;
+                }
+
+                .main_banner_txt span{
+                    font-size:calc(24em / 7.5);
+                    line-height: calc(10em / 7.5);
+                }              
+
+                .main_banner_txt .main_banner_btn a{
+                    font-size:calc(27em / 7.5);
+                    padding:calc(6.3em / 7.5) calc(14.5em / 7.5);
+                }
+                .contents_ad02{margin:0 0 12% 0;}
+                .contents_ad01 .buy_btn .link01{
+                    left: 21%;
+                    top: 93.3%;
+                    width: 57%;
+                    height: 6.7%;                            
+                }
+                .contents_ad02 .buy_btn .link01{
+                    left: 21%;
+                    top: 93.3%;
+                    width: 57%;
+                    height: 6.7%;                               
+                }    
+
+                .bot_banner_list{
+                    flex-wrap: wrap;
+                }
+
+                .bot_banner_wrap{
+                    padding:0 calc(30em / 7.5) calc(30em / 7.5) calc(30em / 7.5);
+                }
+
+
+                .contents01_line{
+                    margin:calc(4em / 7.5) auto calc(40em / 7.5) auto;
+                    font-size:1vw;
+                }
+
+                .contents01_line h2{
+                    font-size:calc(40em / 7.5);
+                    line-height:calc(10em / 7.5);
+                }          
+
+                .contents01_line h2::before{
+                    left:-27%;
+                }
+
+                .contents01_line h2::after{
+                    left:127%;
+                }            
+                .nav_list{
+                    display:block; 
+                    margin:0 0 calc(100em / 7.5) 0;
+                }
+       
+            }
+
+    </style>
+
+<body>
+    <div class="contents">
+        <div class="contents_rel contents_01">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E0315_speedcat%7Eimage01_mo.gif/fmt/gif" media="(max-width: 780px)" >
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E0315_speedcat%7Eimage01_pc.jpg/fmt/jpg" alt=""/>
+            </picture>   
+        </div>        
+                
+        <div class="main_banner_txt">
+            <h1>스피드캣 GO</h1>
+            <!-- 텍스트(타이틀) -->
+            <p>
+                기존 스피드캣의 소재와 디자인에 변주를 주어<br />
+                트렌디하면서도 활동적인 디자인을 완성한<br />
+                '스피드캣' 프랜차이즈의 새로운 모델 '스피드캣 GO'<br /><br />
+                
+                ​다가오는 봄과 여름을 맞아 '스피드캣 GO'와 함께<br />
+                자유롭고 다채로운 스타일을 시도해 보세요!
+            </p>
+        </div>
+
+
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>
