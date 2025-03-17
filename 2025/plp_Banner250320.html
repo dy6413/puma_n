@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">
+
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%; display:block;}
+        div{line-height:1.5;}
+
+        .plp_wrap{
+            position: relative;
+        }
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .video_wrap{
+            position: relative;
+            padding-top: 45.35%;
+            width: 100%;
+            height: 0;
+        }
+
+        .video_wrap video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video_wrap2{
+            position: relative;
+            /* padding-top: 45.35%; */
+            padding-top: 56.25%;
+            width: 100%;
+            height: 0;
+        }
+
+        .video_wrap2 video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main_banner_txt{
+            position: relative;
+            text-align: center;
+            max-width:1200px;
+            margin:6.5rem auto 3rem auto;
+            color:#111;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt_last{ margin-bottom:0;}
+
+        .main_banner_txt h1{
+            font-size:2.8rem;
+            font-weight:600;
+            line-height:2.8rem;
+        }
+        .main_banner_txt p{
+            font-size:1.4rem;
+            font-weight:500;
+            line-height:2.4rem;
+            padding:3.9rem 0 4rem 0;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt span{
+            font-size:1.3rem;
+            font-weight:600;
+            line-height:1.3rem;
+        }        
+        .main_banner_txt .main_banner_btn a{
+            display:inline-block;
+            font-size:1rem;
+            color:#fff;
+            font-weight:400;
+            padding:0.8rem 1.8rem;
+            background:#111;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .main_banner_txt .main_banner_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.bl a{
+            background:#111;
+            color:#fff;
+        }
+
+        .main_banner_txt .main_banner_btn.bl a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.wh a{
+            background:#fff;
+            color:#111;
+        }
+
+        .main_banner_txt .main_banner_btn.wh a:hover{
+            background:rgba(255,255,255,0.8);
+        }
+
+        .kop-overlap-container{display:none !important;}
+
+        .contents_rel{position: relative;}
+        .nav_btn a p {text-indent: -9999px;}
+
+
+        .pc{display:block;}
+        .mo{display:none;}
+
+        @media(max-width:1024px){
+            .tb{display:block;}
+            .with_txt h2{
+                font-size:32px;
+                font-weight:500;
+            }
+        }        
+
+        @media(max-width:780px){
+            .pc{display:none;}
+            .mo{display:block;}            
+            .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+
+            .video_wrap{
+                padding-top:141.75%;
+            }
+
+            .video_wrap2{
+                padding-top:177.75%;
+            }        
+
+            .main_banner_txt{
+                margin:calc(90em / 7.5) auto calc(110em / 7.5) auto;
+                padding:0 calc(20em / 7.5);
+            }
+            .main_banner_txt_last{
+                margin:calc(55em / 7.5) auto calc(50em / 7.5) auto;
+            }
+
+            .main_banner_txt h1{
+                font-size:calc(44em / 7.5);
+                line-height:calc(10em / 7.5);
+            }
+            .main_banner_txt p{
+                font-size:calc(22em / 7.5);
+                padding:calc(8em / 7.5) 0 calc(20em / 7.5) 0;
+                line-height: calc(11em / 7.5);
+                letter-spacing: -1px;
+            }
+            .main_banner_txt h1 em{
+                display:block;
+            }
+
+            .main_banner_txt p em{
+                display:block;
+            }
+
+            .main_banner_txt span{
+                font-size:calc(24em / 7.5);
+                line-height: calc(10em / 7.5);
+            }              
+
+            .main_banner_txt .main_banner_btn a{
+                font-size:calc(27em / 7.5);
+                padding:calc(6.3em / 7.5) calc(14.5em / 7.5);
+            }
+        
+        }
+
+    </style>
+
+<body>
+    <div class="contents">
+        <div class="contents_rel contents_01">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Erunning_plp_01_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Erunning_plp_01_pc.jpg/fmt/jpg" alt=""/>
+            </picture>   
+        </div>        
+                
+        <div class="main_banner_txt">
+            <h1>YOU’LL NEVER REGRET A RUN</h1>
+            <!-- 텍스트(타이틀) -->
+            <p>
+                러닝은 쉽지 않습니다. 예전에도, 지금까지도.<br />
+                문을 나서는 순간부터, 페이스를 유지하는 것까지 모든 것이 도전의 연속이지만, 끝내 그 가치는 증명됩니다.<br />
+                그래서 우리는 달립니다.<br />
+                그리고 그 속에서 <strong>우리 안의 위대함을 발견합니다.</strong>
+            </p>
+            <div class="main_banner_btn bl">
+                <a href="">더 알아보기</a>
+            </div>               
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>

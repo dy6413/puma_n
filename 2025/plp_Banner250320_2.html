@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">
+
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%; display:block;}
+        div{line-height:1.5;}
+
+        .plp_wrap{
+            position: relative;
+        }
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+
+        .kop-overlap-container{display:none !important;}
+
+        .contents_rel{position: relative;}
+        .nav_btn a p {text-indent: -9999px;}
+
+        .bot_banner_wrap{
+            position: relative; 
+            padding:6rem 0 3.1rem 0;
+            max-width:1800px;
+            margin:0 auto;            
+        }
+        .bot_banner_wrap2{
+            position: relative; 
+            padding:6rem 1.5rem 3.1rem 1.5rem;
+            max-width:100%;
+            margin:0 auto;            
+        }    
+        .bot_banner_list{display:flex; gap:20px; justify-content:center;}
+        .bot_banner_list2{display:flex; gap:20px; justify-content:center;}
+        .bot_banner_list a{display:block; position: relative; text-decoration: none;}
+        .bot_banner_list2 a{display:block; position: relative; text-decoration: none;}
+
+        .bot_banner_wrap h1{
+            font-size:2.5rem;
+            font-weight:600;
+            line-height:2.5rem;
+            text-align: center;
+            margin:0 0 5rem 0;
+        }    
+
+        .bot_banner_list2 .with_txt{
+            text-align:center;
+            margin:1.5rem 0 0 0;
+        }
+
+        .bot_banner_list2 .with_txt h2{
+            color:#111;
+            font-size:28px;
+            line-height:40px;
+            font-weight:600;
+            margin:0;
+        }
+
+        .bot_banner_list2 .with_txt p{
+            color:#111;
+            padding-top:10px;
+            font-size:18px;
+            line-height:28px;
+            font-weight:400;
+        }
+        .with_txt .main_with_btn{
+            margin:2rem 0 0 0;
+        }
+
+        .with_txt .main_with_btn a{
+            display:inline-block;
+            font-size:1rem;
+            color:#fff;
+            font-weight:400;
+            padding:1rem 1.8rem;
+            background:#111;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .with_txt .main_with_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .with_txt .main_with_btn.bl a{
+            background:#111;
+            color:#fff;
+        }
+
+        .with_txt .main_with_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .with_txt .main_with_btn.wh a{
+            background:#fff;
+            color:#111;
+        }
+
+        .with_txt .main_with_btn.wh a:hover{
+            background:rgba(255,255,255,0.8);
+        }    
+
+        .nitro_wrap{position: relative;}
+        .nitro_wrap .nitro_box{display:flex;}
+        .nitro_wrap .nitro_box2{display:flex; flex-direction:row-reverse;}
+        .nitro_wrap .nitro_with{width:50%;}        
+
+        .contents_03{padding:4rem 0 0 0;}
+
+
+        .pc{display:block;}
+        .mo{display:none;}
+
+        @media(max-width:1024px){
+            .tb{display:block;}
+            .bot_banner_list{
+                gap:10px;
+            }
+            .bot_banner_wrap{
+                padding:4rem 1.5rem 1.5rem 1.5rem;
+            }
+            .with_txt h2{
+                font-size:32px;
+                font-weight:500;
+            }
+        }        
+
+        @media(max-width:780px){
+            .pc{display:none;}
+            .mo{display:block;}            
+            .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+
+
+            .with_txt .main_with_btn{
+                margin:calc(30em / 7.5) 0 0 0;
+            }    
+
+
+            .bot_banner_wrap h1{
+                font-size:calc(46em / 7.5);
+                line-height:calc(10em / 7.5);
+                margin:0 0 2rem 0;
+            }    
+
+            .bot_banner_list2{
+                flex-wrap: wrap;
+                gap:calc(60em / 7.5);
+            }
+            .bot_banner_list2 .with_txt{
+                margin:calc(40em / 7.5) 0;
+            }        
+            .bot_banner_list2 .with_txt h2{
+                font-size:calc(56em / 7.5);
+            }
+
+            .bot_banner_list2 .with_txt p{
+                font-size:calc(22em / 7.5);
+                line-height:calc(10em / 7.5);
+                padding-top:calc(8em / 7.5);
+            }
+
+            .bot_banner_wrap{
+                padding:calc(50em / 7.5) 0 calc(30em / 7.5) 0;
+            }            
+
+            .nitro_wrap .nitro_box{display:block;}
+            .nitro_wrap .nitro_box2{display:block; flex-direction:row-reverse;}
+            .nitro_wrap .nitro_with{width:100%;}            
+            
+            .contents_03{padding:calc(30em / 7.5) 0 0 0;}
+        }
+
+
+
+    </style>
+
+<body>
+    <div class="contents">
+        <div class="bot_banner_wrap bot_banner_wrap2">
+            <div class="bot_banner_list2">
+                <div class="banner_le">
+                    <picture>
+                        <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Emain_with_01_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                        <!--모바일 이미지-->
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Emain_with_01_pc.jpg/fmt/jpg" alt=""/>
+                        <!--피시 이미지-->
+                    </picture>                              
+                    <div class="with_txt">
+                        <h2>THE PACE SETTER.</h2>
+                        <p>
+                            러너는 달립니다—스케줄 따위 상관없이.<br />
+                            새벽 5시 알람부터 퇴근 후 트레드밀까지,<br /> 어떤 상황에서도 당신은 해내고 있습니다.<br />
+                            이제, 당신을 위한 기어를 찾을 시간입니다.          
+                        </p>
+                        <div class="main_with_btn bl">
+                            <a href="">Race DAY 보러가기</a>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="banner_ra">
+                    <picture>
+                        <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Emain_with_02_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                        <!--모바일 이미지-->
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Emain_with_02_pc.jpg/fmt/jpg" alt=""/>
+                        <!--피시 이미지-->
+                    </picture>                               
+                    <div class="with_txt">
+                        <h2>THE MINDFUL MOVER.</h2>
+                        
+                        <p>
+                            달리든, 느끼든… 아니면 쉬어가든. 이 여정은 온전히 당신의 것입니다<br />
+                            당신의 방식대로, 당신만의 속도로.<br />
+                            오늘의 동기가 무엇이든, 내일은 또 다를지라도,<br />
+                            당신이 준비될 때, 우리는 함께합니다
+                        </p>
+                        <div class="main_with_btn bl">
+                            <a href="">로드러닝 보러가기</a>
+                        </div>                                
+                    </div>                            
+                </div>
+            </div>        
+        </div>        
+
+
+
+        <div class="contents_rel contents_02">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_02_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <!--모바일 이미지-->
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_02_pc.jpg/fmt/jpg" alt=""/>
+                <!--피시 이미지-->
+            </picture>   
+
+            <div class="nitro_wrap">
+                <div class="nitro_box">
+                    <div class="nitro_with nitro_le">
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_001.gif/fmt/gif" alt=""/>
+                    </div>
+                    <div class="nitro_with nitro_ra">
+                        <picture>
+                            <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_03_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                            <!--모바일 이미지-->
+                            <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_03_pc.jpg/fmt/jpg" alt=""/>
+                            <!--피시 이미지-->
+                        </picture>  
+                    </div>
+                </div>
+
+                <div class="nitro_box nitro_box2">
+                    <div class="nitro_with nitro_le">
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_002.gif/fmt/gif" alt=""/>
+                    </div>
+                    <div class="nitro_with nitro_ra">
+                        <picture>
+                            <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_04_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                            <!--모바일 이미지-->
+                            <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_04_pc.jpg/fmt/jpg" alt=""/>
+                            <!--피시 이미지-->
+                        </picture>  
+                    </div>
+                </div>                
+            </div>
+
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_05_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <!--모바일 이미지-->
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_05_pc.jpg/fmt/jpg" alt=""/>
+                <!--피시 이미지-->
+            </picture>   
+
+        </div>
+
+
+
+        <div class="bot_banner_wrap bot_banner_wrap2">
+            <div class="bot_banner_list2">
+                <div class="banner_le">
+                    <picture>
+                        <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Emain_with_03_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                        <!--모바일 이미지-->
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Emain_with_03_pc.jpg/fmt/jpg" alt=""/>
+                        <!--피시 이미지-->
+                    </picture>                              
+                    <div class="with_txt">
+                        <h2>여성</h2>
+                        <div class="main_with_btn bl">
+                            <a href="">여성 러닝 바로가기</a>
+                        </div>    
+                    </div>
+                </div>
+
+                <div class="banner_ra">
+                    <picture>
+                        <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Emain_with_04_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                        <!--모바일 이미지-->
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Emain_with_04_pc.jpg/fmt/jpg" alt=""/>
+                        <!--피시 이미지-->
+                    </picture>                               
+                    <div class="with_txt">
+                        <h2>남성</h2>
+                        <div class="main_with_btn bl">
+                            <a href="">남성 러닝 바로가기</a>
+                        </div>                                
+                    </div>                            
+                </div>
+            </div>        
+        </div>       
+        
+        <div class="contents_rel contents_03">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_06_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <!--모바일 이미지-->
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7Eplp_06_pc.jpg/fmt/jpg" alt=""/>
+                <!--피시 이미지-->
+            </picture>  
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>

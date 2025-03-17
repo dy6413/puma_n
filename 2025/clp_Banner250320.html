@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">
+
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%; display:block;}
+        div{line-height:1.5;}
+
+        .plp_wrap{
+            position: relative;
+        }
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .contents_03{margin:5rem 0 0 0;}
+
+        .video_wrap{
+            position: relative;
+            padding-top: 45.35%;
+            width: 100%;
+            height: 0;
+        }
+
+        .video_wrap video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video_wrap2{
+            position: relative;
+            padding-top: 34.75%;
+            width: 100%;
+            height: 0;
+        }
+
+        .video_wrap2 video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+/* 
+        .video_wrap2 video::-webkit-media-controls {
+            display: none !important;
+        }
+
+        .video_wrap2 video::-webkit-media-controls-panel {
+            display: none !important;
+        }         */
+
+        .main_banner_txt{
+            position: relative;
+            text-align: center;
+            max-width:900px;
+            margin:6.5rem auto 3rem auto;
+            color:#111;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt_last{ margin-bottom:0;}
+
+        .main_banner_txt h1{
+            font-size:2.8rem;
+            font-weight:600;
+            line-height:2.8rem;
+        }
+        .main_banner_txt p{
+            font-size:1.4rem;
+            font-weight:500;
+            line-height:2.4rem;
+            padding:3.9rem 0 4rem 0;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt span{
+            font-size:1.3rem;
+            font-weight:600;
+            line-height:1.3rem;
+        }        
+        .main_banner_txt .main_banner_btn a{
+            display:inline-block;
+            font-size:1rem;
+            color:#fff;
+            font-weight:400;
+            padding:0.8rem 1.8rem;
+            background:#111;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .main_banner_txt .main_banner_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.bl a{
+            background:#111;
+            color:#fff;
+        }
+
+        .main_banner_txt .main_banner_btn.bl a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.wh a{
+            background:#fff;
+            color:#111;
+        }
+
+        .main_banner_txt .main_banner_btn.wh a:hover{
+            background:rgba(255,255,255,0.8);
+        }
+
+        .kop-overlap-container{display:none !important;}
+
+        .contents_rel{position: relative;}
+        .nav_btn a p {text-indent: -9999px;}
+
+        .bot_banner_wrap{
+            position: relative; 
+            padding:6rem 0 3.1rem 0;
+            max-width:1800px;
+            margin:0 auto;            
+        }
+        .bot_banner_wrap2{
+            position: relative; 
+            padding:6rem 1.5rem 3.1rem 1.5rem;
+            max-width:100%;
+            margin:0 auto;            
+        }    
+        .bot_banner_list{display:flex; gap:20px; justify-content:center;}
+        .bot_banner_list2{display:flex; gap:20px; justify-content:center;}
+        .bot_banner_list a{display:block; position: relative; text-decoration: none;}
+        .bot_banner_list2 a{display:block; position: relative; text-decoration: none;}
+
+        .bot_banner_wrap h1{
+            font-size:2.5rem;
+            font-weight:600;
+            line-height:2.5rem;
+            text-align: center;
+            margin:0 0 5rem 0;
+        }    
+
+        .bot_banner_list2 .with_txt{
+            text-align:center;
+            margin:1.5rem 0 0 0;
+        }
+
+        .bot_banner_list2 .with_txt h2{
+            color:#111;
+            font-size:28px;
+            line-height:40px;
+            font-weight:600;
+            margin:0;
+        }
+
+        .bot_banner_list2 .with_txt p{
+            color:#111;
+            padding-top:10px;
+            font-size:18px;
+            line-height:28px;
+            font-weight:400;
+        }
+        .with_txt .main_with_btn{
+            margin:2rem 0 0 0;
+        }
+
+        .with_txt .main_with_btn a{
+            display:inline-block;
+            font-size:1rem;
+            color:#fff;
+            font-weight:400;
+            padding:1rem 1.8rem;
+            background:#111;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .with_txt .main_with_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .with_txt .main_with_btn.bl a{
+            background:#111;
+            color:#fff;
+        }
+
+        .with_txt .main_with_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .with_txt .main_with_btn.wh a{
+            background:#fff;
+            color:#111;
+        }
+
+        .with_txt .main_with_btn.wh a:hover{
+            background:rgba(255,255,255,0.8);
+        }    
+
+
+        .video_play{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #playButton {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border: none;
+            width: calc(60em / 7.5);
+            height: calc(60em / 7.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #playButton::after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: calc(10em / 7.5) solid transparent;
+            border-bottom: calc(10em / 7.5) solid transparent;
+            border-left: calc(15em / 7.5) solid white;
+        }
+
+        .pc{display:block;}
+        .mo{display:none;}
+
+        @media(max-width:1024px){
+            .tb{display:block;}
+            .bot_banner_list{
+                gap:10px;
+            }
+            .bot_banner_wrap{
+                padding:4rem 1.5rem 1.5rem 1.5rem;
+            }
+            .with_txt h2{
+                font-size:32px;
+                font-weight:500;
+            }
+        }        
+
+        @media(max-width:780px){
+            .pc{display:none;}
+            .mo{display:block;}            
+            .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+
+            .contents_03{margin:calc(100em / 7.5) 0 0 0;}
+
+            .video_wrap{
+                padding-top:141.75%;
+            }
+
+            .video_wrap2{
+                padding-top:99.95%;
+            }        
+
+            .main_banner_txt{
+                margin:calc(90em / 7.5) auto calc(110em / 7.5) auto;
+                padding:0 calc(20em / 7.5);
+            }
+            .main_banner_txt_last{
+                margin:calc(55em / 7.5) auto calc(50em / 7.5) auto;
+            }
+
+            .main_banner_txt h1{
+                font-size:calc(44em / 7.5);
+                line-height:calc(10em / 7.5);
+            }
+            .main_banner_txt p{
+                font-size:calc(22em / 7.5);
+                padding:calc(8em / 7.5) 0 calc(20em / 7.5) 0;
+                line-height: calc(11em / 7.5);
+                letter-spacing: -1px;
+            }
+            .main_banner_txt h1 em{
+                display:block;
+            }
+
+            .main_banner_txt p em{
+                display:block;
+            }
+
+            .main_banner_txt span{
+                font-size:calc(24em / 7.5);
+                line-height: calc(10em / 7.5);
+            }              
+
+            .main_banner_txt .main_banner_btn a{
+                font-size:calc(27em / 7.5);
+                padding:calc(6.3em / 7.5) calc(14.5em / 7.5);
+            }
+
+            .with_txt .main_with_btn{
+                margin:calc(30em / 7.5) 0 0 0;
+            }    
+
+
+            .bot_banner_wrap h1{
+                font-size:calc(46em / 7.5);
+                line-height:calc(10em / 7.5);
+                margin:0 0 2rem 0;
+            }    
+
+            .bot_banner_list2{
+                flex-wrap: wrap;
+                gap:calc(60em / 7.5);
+            }
+            .bot_banner_list2 .with_txt{
+                margin:calc(40em / 7.5) 0;
+            }        
+            .bot_banner_list2 .with_txt h2{
+                font-size:calc(56em / 7.5);
+            }
+
+            .bot_banner_list2 .with_txt p{
+                font-size:calc(22em / 7.5);
+                line-height:calc(10em / 7.5);
+                padding-top:calc(8em / 7.5);
+            }
+
+            .bot_banner_wrap{
+                padding:calc(50em / 7.5) 0 calc(30em / 7.5) 0;
+            }            
+        }
+
+
+
+    </style>
+
+<body>
+    <div class="contents">
+        <div class="contents_rel contents_01">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7ERunning_clp_mo_01.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7ERunning_clp_pc_01.jpg/fmt/jpg" alt=""/>
+            </picture>   
+
+            <div class="main_banner_txt">
+                <h1>A HIGH WORTH CHASING</h1>
+                <!-- 텍스트(타이틀) -->
+                <p>
+                    새벽 5시, 아이들이 깨기 전 전력 질주.<br />
+                    회의 사이 ‘기술적으로는 근무 중’인 트레드밀 세션.<br />
+                    세상이 잠들 무렵, 어둠 속에서 이어가는 러닝.<br /><br />
+                    어떤 상황에서도 러너는 길을 찾아냅니다.<br />
+                    왜냐하면, 그 짜릿한 순간은 달릴 가치가 있으니까.<br />
+                    <strong>So go wild.</strong>
+                </p>
+                <div class="main_banner_btn bl">
+                    <a href="">더 알아보기</a>
+                </div>               
+            </div>
+        </div>        
+                
+        <div class="contents_rel contents_02">
+            <div class="bot_banner_wrap bot_banner_wrap2">
+                <div class="bot_banner_list2">
+                    <div class="banner_le">
+                        <picture>
+                            <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7ERunning_clp_pc_02.jpg/fmt/jpg" media="(max-width: 780px)" >
+                            <!--모바일 이미지-->
+                            <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7ERunning_clp_pc_02.jpg/fmt/jpg" alt=""/>
+                            <!--피시 이미지-->
+                        </picture>                              
+                        <div class="with_txt">
+                            <h2>THE PACE SETTER.</h2>
+                            <p>
+                                러너는 달립니다—스케줄 따위 상관없이.<br />
+                                새벽 5시 알람부터 퇴근 후 트레드밀까지,<br /> 어떤 상황에서도 당신은 해내고 있습니다.<br />
+                                이제, 당신을 위한 기어를 찾을 시간입니다.          
+                            </p>
+                            <div class="main_with_btn bl">
+                                <a href="">Race DAY 보러가기</a>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <div class="banner_ra">
+                        <picture>
+                            <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7ERunning_clp_pc_03.jpg/fmt/jpg" media="(max-width: 780px)" >
+                            <!--모바일 이미지-->
+                            <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250320_gowild%7ERunning_clp_pc_03.jpg/fmt/jpg" alt=""/>
+                            <!--피시 이미지-->
+                        </picture>                               
+                        <div class="with_txt">
+                            <h2>THE MINDFUL MOVER.</h2>
+                            
+                            <p>
+                                달리든, 느끼든… 아니면 쉬어가든. 이 여정은 온전히 당신의 것입니다<br />
+                                당신의 방식대로, 당신만의 속도로.<br />
+                                오늘의 동기가 무엇이든, 내일은 또 다를지라도,<br />
+                                당신이 준비될 때, 우리는 함께합니다
+                            </p>
+                            <div class="main_with_btn bl">
+                                <a href="">로드러닝 보러가기</a>
+                            </div>
+                        </div>                            
+                    </div>
+                </div>        
+            </div>        
+        </div>
+
+        <div class="contents_rel contents_03">
+            <div class="video">
+                <div class="video_wrap2">
+                    <video id="video_pc" class="pc" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E0320_gowild%7ERunning_pc.mp4" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E0320_gowild%7ERunning_pc.mp4" playsinline="" loop="" muted="" preload="none" controls="" poster="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Evideo_vs_pc.jpg/fmt/jpg">
+                        <!--pc 비디오-->
+                    </video>      
+                    
+                    <video id="video_mo" class="mo" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E0320_gowild%7ERunning_mo.mp4" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E0320_gowild%7ERunning_mo.mp4"  playsinline="" loop="" muted="" preload="none" controls="" poster="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7Emain%7Evideo_vs_mo.jpg/fmt/jpg">
+                        <!--mobile 비디오-->
+                    </video>   
+                </div>
+                <!-- <div class="video_play">
+                    <button id="playButton"></button>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+<script type="text/javascript">
+
+        const videoPc = document.getElementById('video_pc');
+        const videoMo = document.getElementById('video_mo');
+        const video_btn = document.getElementById('playButton');
+
+        function togglePlayPause(videoElement) {
+            if (videoElement.paused) {
+                videoElement.play();  
+                video_btn.style.display = 'none';
+            } else {
+                videoElement.pause(); 
+                video_btn.style.display = 'block'; 
+            }
+        }
+
+        video_btn.addEventListener('click', () => {
+
+            if (window.innerWidth > 780) {
+                if (videoPc.paused) {
+                    videoPc.play();
+                    video_btn.style.display = 'none';
+                } else {
+                    videoPc.pause();
+                    video_btn.style.display = 'block';
+                }
+            } 
+
+            else {
+                if (videoMo.paused) {
+                    videoMo.play();
+                    video_btn.style.display = 'none';
+                } else {
+                    videoMo.pause();
+                    video_btn.style.display = 'block';
+                }
+            }
+        });
+
+
+        videoPc.addEventListener('click', () => {
+            if (window.innerWidth > 780) {
+                togglePlayPause(videoPc);
+            }
+        });
+        videoMo.addEventListener('click', () => {
+            if (window.innerWidth <= 780) {
+                togglePlayPause(videoMo);
+            }
+        });
+
+        
+        videoPc.addEventListener('pause', () => video_btn.style.display = 'block');
+        videoMo.addEventListener('pause', () => video_btn.style.display = 'block');
+
+        
+        videoPc.addEventListener('ended', () => video_btn.style.display = 'block');
+        videoMo.addEventListener('ended', () => video_btn.style.display = 'block');
+
+
+
+
+
+</script>
+
+</html>
