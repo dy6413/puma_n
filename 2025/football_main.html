@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+</head>
+
+    <style>
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+/* 
+        .h-placeholder.h-placeholder--overlap{
+            min-height:0 !important;
+        }
+        .h-placeholder.h-placeholder--overlap .kop-overlap-carousel{
+            min-height:0 !important;
+        } */
+
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%;}
+
+        div{line-height:1.5;}
+
+        .kop-overlap-container{display:none !important;}
+        .kop-overlap-carousel{padding-top:0 !important;}
+        
+        .main_wrap{position: relative; margin-bottom:2%;}
+
+        .main_img_up_txt{
+            color:#fff;
+            word-break: keep-all;
+            position:absolute;
+            left:4%;
+            top:38%;            
+            font-size:0.39vw;
+        }
+
+        .main_img_up_txt h1{
+            font-size:calc(60em / 7.5);
+            line-height:calc(10em / 7.5);
+            font-weight:600;
+        }
+
+        .main_img_up_txt p{
+            font-size:calc(20em / 7.5);
+            line-height:calc(10em / 7.5);
+            font-weight: 500;
+            padding: 2% 0 1% 0;
+            word-break: keep-all;
+            margin:0;
+        }
+
+        .main_img_up_btn_wrap{
+            color: #fff;
+            word-break: keep-all;
+            position: absolute;
+            left: 4%;
+            top: 62%;
+            font-size: 0.39vw;
+            display: flex;
+            gap: 5%;  
+            justify-content: flex-start;  
+            align-items: center;  
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn{
+            position: relative;
+            display: flex;
+            justify-content: flex-start;  
+            align-items: center;  
+            padding: 3.3% 7.5%;  
+            background: #fff;
+            transition: all 0.2s;
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn a{
+            display: inline-block;
+            font-size: calc(18em / 7.5);
+            line-height: 1.5;  
+            color: #111;
+            font-weight: 400;
+            text-decoration: none;
+            transition: all 0.2s;
+            text-align: left;  
+            white-space: nowrap; 
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn:hover{
+            background:rgba(255,255,255,0.8);
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn:hover a{
+            color:#111;
+        }
+
+
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .pc{display:block;}
+        .mo{display:none;}
+        
+        @media(max-width:780px){
+            .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+            .pc{display:none;}
+            .mo{display:block;}  
+
+        .main_img_up_txt{
+            color:#111;
+            word-break: keep-all;
+            position:inherit;
+            left:inherit;
+            top:inherit;            
+            font-size:1vw;
+            text-align: center;
+            margin:5% 0 0 0;
+        }
+
+        .main_img_up_txt h1{
+            font-size:calc(44em / 7.5);
+        }
+
+        .main_img_up_txt p{
+            font-size:calc(22em / 7.5);
+            padding: 2% 0 1% 0;
+        }
+
+        .main_img_up_btn_wrap{
+            color: #111;
+            position: inherit;
+            left: inherit;
+            top: inherit;
+            font-size: 1vw;
+            display: inline-block;
+            background-color: inherit;
+            margin:5% 0 0 0;
+            text-align: center;
+            width:100%;
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn{
+            display: block;
+            padding: 1.4% 3.15%;
+            width: 28%;
+            margin: 0 auto 2% auto;
+            background: #111;
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn a{
+            display: inline-block;
+            font-size: calc(18em / 7.5);
+            line-height: calc(10em / 7.5);  
+            color: #fff;
+            transition: all 0.2s;
+       
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn:hover{
+            background:rgba(000,000,000,0.8);
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn:hover a{
+            color:#fff;
+        }        
+
+        }  
+    </style>
+
+<body>
+    <div class="contents">
+
+        <div class="main_wrap">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Eimage01_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <!--모바일 이미지-->
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Eimage01_pc.jpg/fmt/jpg" alt=""/>
+                <!--피시 이미지-->
+            </picture>  
+
+            <div class="main_img_up_txt">
+                <h1>FIND YOUR FEARLESS</h1>
+                <p>피치 위에서 당신만의 무한한 축구를 펼쳐보세요.</p>
+            </div>
+
+            <div class="main_img_up_btn_wrap">
+                <div class="main_img_up_btn"><a href="">퓨처 바로가기</a></div>
+                <div class="main_img_up_btn"><a href="">울트라 바로가기</a></div>
+                <div class="main_img_up_btn"><a href="">킹 바로가기</a></div>
+            </div>         
+        </div>        
+    </div>
+    
+
+
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>

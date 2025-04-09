@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+</head>
+
+    <style>
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+/* 
+        .h-placeholder.h-placeholder--overlap{
+            min-height:0 !important;
+        }
+        .h-placeholder.h-placeholder--overlap .kop-overlap-carousel{
+            min-height:0 !important;
+        } */
+
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%;}
+
+        div{line-height:1.5;}
+
+        .kop-overlap-container{display:none !important;}
+        .kop-overlap-carousel{padding-top:0 !important;}
+
+        .main_wrap{position: relative;}
+
+        .main_img_up_txt{
+            color:#fff;
+            word-break: keep-all;
+            position:absolute;
+            left:4%;
+            top:34%;            
+            font-size:0.39vw;
+        }
+
+        .main_img_up_txt h1{
+            font-size:calc(60em / 7.5);
+            line-height:calc(10em / 7.5);
+            font-weight:600;
+        }
+
+        .main_img_up_txt p{
+            font-size:calc(20em / 7.5);
+            line-height:calc(10em / 7.5);
+            font-weight: 500;
+            padding: 2% 0 1% 0;
+            word-break: keep-all;
+            margin:0;
+        }
+
+        .main_img_up_btn_wrap{
+            color: #fff;
+            word-break: keep-all;
+            position: absolute;
+            left: 4%;
+            top: 62%;
+            font-size: 0.39vw;
+            display: flex;
+            gap: 5%;  
+            justify-content: flex-start;  
+            align-items: center;  
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn{
+            position: relative;
+            display: flex;
+            justify-content: flex-start;  
+            align-items: center;  
+            padding: 3.3% 7.5%;  
+            background: #fff;
+            transition: all 0.2s;
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn a{
+            display: inline-block;
+            font-size: calc(18em / 7.5);
+            line-height: 1.5;  
+            color: #111;
+            font-weight: 400;
+            text-decoration: none;
+            transition: all 0.2s;
+            text-align: left;  
+            white-space: nowrap; 
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn:hover{
+            background:rgba(255,255,255,0.8);
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn:hover a{
+            color:#111;
+        }
+
+        .contents_rel{position: relative;}
+
+        .contents_01{margin:2% 0 2% 0;}
+
+        .contents_02{margin:0 0 5% 0;}
+
+        .football_wrap{
+            display: flex;
+            gap: 0 0.7%;
+            font-size: 0.39vw;
+            padding: 0 0.7%;
+            justify-content: center;
+            align-items: flex-start;
+
+        }
+        .football_with{
+            position: relative;
+            width:33%;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between; 
+            height:100%;
+        }
+
+        .football_with img{
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            flex-grow:0;
+        }        
+
+        .with_txt{
+            text-align: center;
+            color:#111;
+            font-size:0.39vw;
+            flex-shrink:0;
+            flex-shrink: 0;
+            flex-grow:1;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+        }
+
+        .with_txt h2{
+            font-size:calc(30em / 7.5);
+            line-height:calc(10em / 7.5);
+            font-weight:600;
+            margin:6% 0 1.5% 0;
+            padding:0;
+        }
+
+        .with_txt p{
+            font-size:calc(20em / 7.5);
+            line-height:calc(10em / 7.5);
+            font-weight: 500;
+            word-break: keep-all;
+            margin:0;
+            padding:0;
+        }
+
+        .with_btn{
+            word-break: keep-all;
+            font-size: 0.39vw;
+            justify-content: flex-start;  
+            align-items: center;  
+            text-align: center;
+            margin:4% 0 0 0;
+        }
+
+
+        .with_btn a{
+            display: inline-block;
+            font-size: calc(18em / 7.5);
+            line-height: 1.5;  
+            color: #fff;
+            background:#111;
+            font-weight: 400;
+            text-decoration: none;
+            transition: all 0.2s;
+            text-align: left;  
+            white-space: nowrap; 
+            padding:2% 5%;
+        }
+
+        .with_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }          
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .pc{display:block;}
+        .mo{display:none;}
+        
+        @media(max-width:780px){
+            .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+            .pc{display:none;}
+            .mo{display:block;}  
+
+        .main_img_up_txt{
+            color:#111;
+            word-break: keep-all;
+            position:inherit;
+            left:inherit;
+            top:inherit;            
+            font-size:1vw;
+            text-align: center;
+            margin:5% 0 10% 0;
+        }
+
+        .main_img_up_txt h1{
+            font-size:calc(44em / 7.5);
+        }
+
+        .main_img_up_txt p{
+            font-size:calc(22em / 7.5);
+            padding: 2% 0 1% 0;
+        }
+
+        .main_img_up_btn_wrap{
+            color: #111;
+            position: inherit;
+            left: inherit;
+            top: inherit;
+            font-size: 1vw;
+            display: inline-block;
+            background-color: inherit;
+            margin:5% 0 8% 0;
+            text-align: center;
+            width:100%;
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn{
+            display: block;
+            padding: 1.4% 3.15%;
+            width: 20%;
+            margin: 0 auto 2% auto;
+            background: #111;
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn a{
+            display: inline-block;
+            font-size: calc(18em / 7.5);
+            line-height: calc(10em / 7.5);  
+            color: #fff;
+            transition: all 0.2s;
+
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn:hover{
+            background:rgba(000,000,000,0.8);
+        }
+
+        .main_img_up_btn_wrap .main_img_up_btn:hover a{
+            color:#fff;
+        }        
+
+        .football_wrap{
+                display: block;
+                font-size: 1vw;
+                padding: 0;
+            }
+            
+            .football_with{
+                margin-bottom:10%;
+            }
+
+            .football_with{
+                width:100%;
+                display:block;
+            }                 
+
+            .with_txt{
+                font-size:1vw;
+            }
+
+            .with_txt h2{
+                font-size:calc(30em / 7.5);
+                line-height:calc(10em / 7.5);
+                margin:6% 0 1.5% 0;
+                padding:0;
+            }
+
+            .with_txt p{
+                font-size:calc(20em / 7.5);
+                line-height:calc(10em / 7.5);
+                margin:0;
+                padding:0;
+            }
+
+            .with_btn{
+                font-size: 1vw;
+                margin:4% 0 0 0;
+            }
+
+
+            .with_btn a{
+                font-size: calc(18em / 7.5);
+                line-height: calc(10em / 7.5);  
+                color: #fff;
+                padding:2% 5%;
+            }                    
+
+        }  
+    </style>
+
+<body>
+    <div class="contents">
+
+        <div class="main_wrap">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Efuture_01_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <!--모바일 이미지-->
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Efuture_01_pc.jpg/fmt/jpg" alt=""/>
+                <!--피시 이미지-->
+            </picture>  
+
+            <div class="main_img_up_txt">
+                <h1>퓨처</h1>
+                <p>최적의 핏을 위한 착화감</p>
+            </div>
+        </div>    
+        
+        <div class="contents_rel contents_01">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Elocal_ultra_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Elocal_ultra_pc.jpg/fmt/jpg" alt=""/>                
+            </picture>       
+        </div>          
+
+        <div class="contents_rel contents_02">
+            <div class="football_wrap">
+                <div class="football_with">
+                    <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Efuture_02_pc.jpg/fmt/jpg" alt=""/>
+                    <div class="with_txt">
+                        <h2>민첩성</h2>
+                        <p>
+                            원형 스터드 배열과 이중 밀도 구조로 설계된<br />
+                            FLEXGILITY 아웃솔은 민첩한 360도 움직임을 지원                            
+                        </p>
+                    </div>
+                </div>
+                <div class="football_with">
+                    <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Efuture_03_pc.jpg/fmt/jpg" alt=""/>
+                    <div class="with_txt">
+                        <h2>착화감</h2>
+                        <p>
+                            FUZIONFIT³ 어퍼는 신축성 있는 LYCRA® 레이어,<br />
+                            3D Fuzionpods과 PWRTAPE로 편안한 핏감 제공                            
+                        </p>
+                    </div>                    
+                </div>
+                <div class="football_with">
+                    <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E240411_football%7Efuture_04_pc.jpg/fmt/jpg" alt=""/>
+                    <div class="with_txt">
+                        <h2>컨트롤</h2>
+                        <p>
+                            텍스처 처리된 고밀도 메시 레이어와<br />
+                            GripControlPro 마감으로 탁월한 볼 컨트롤 제공                            
+                        </p>
+                    </div>                    
+                </div>                                
+            </div>
+        </div>   
+
+    </div>
+    
+
+
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>
