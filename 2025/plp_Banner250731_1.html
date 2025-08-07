@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">ul, ol {
+    padding:0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    font-family: Noto Sans KR, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5 !important;
+    color: #222;
+    text-align: left;
+    background-color: #fff;            
+}
+
+
+img{max-width:100%; width:100%; display:block;}
+div{line-height:1.5;}
+
+.plp_wrap{
+    position: relative;
+}
+
+.mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+.main_banner_txt{
+    position: relative;
+    text-align: center;
+    max-width:900px;
+    margin:6.5rem auto 6rem auto;
+    color:#111;
+    word-break: keep-all;
+}
+
+.main_banner_txt_last{ margin-bottom:0;}
+
+.main_banner_txt h1{
+    font-size:2.8rem;
+    font-weight:600;
+    line-height:2.8rem;
+}
+.main_banner_txt p{
+    font-size:1.4rem;
+    font-weight:500;
+    line-height:2.4rem;
+    padding:3.9rem 0 4rem 0;
+    word-break: keep-all;
+}
+
+.main_banner_txt span{
+    font-size:1.3rem;
+    font-weight:600;
+    line-height:1.3rem;
+}        
+.main_banner_txt .main_banner_btn a{
+    display:inline-block;
+    font-size:1rem;
+    color:#fff;
+    font-weight:400;
+    padding:0.8rem 1.8rem;
+    background:#111;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.main_banner_txt .main_banner_btn a:hover{
+    background:rgba(0,0,0,0.8);
+}
+
+.main_banner_txt .main_banner_btn.bl a{
+    background:#111;
+    color:#fff;
+}
+
+.main_banner_txt .main_banner_btn.bl a:hover{
+    background:rgba(0,0,0,0.8);
+}
+
+.main_banner_txt .main_banner_btn.wh a{
+    background:#fff;
+    color:#111;
+}
+
+.main_banner_txt .main_banner_btn.wh a:hover{
+    background:rgba(255,255,255,0.8);
+}
+
+.kop-overlap-container{display:none !important;}
+
+.video_wrap{
+    position: relative;
+    padding-top: 56.25%;
+    width: 100%;
+    height: 0;
+}
+
+.video_wrap video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}        
+
+
+.contents01_line{
+    text-align: center; width:100%; 
+    overflow: hidden;
+    margin:1rem auto 2rem auto;
+    font-size:0.39vw;
+}
+
+    .contents01_line h2{
+        font-size:calc(40em / 7.5);
+        font-weight:600;
+        text-align: center;
+        line-height:calc(10em / 7.5);
+        position: relative;
+        letter-spacing: 5px;
+    }          
+
+    .contents01_line h2::before{
+        content:'';
+        display:block;
+        border:2px solid #111;
+        width:100%;
+        height:auto;
+        position:absolute;
+        left:-10%;
+        top:50%;
+        transform:translate(-50%,-50%);
+    }
+
+    .contents01_line h2::after{
+        content:'';
+        display:block;
+        border:2px solid #111;
+        width:100%;
+        height:auto;
+        position:absolute;
+        left:110%;
+        top:50%;
+        transform:translate(-50%,-50%);
+    }            
+    .nav_list{display:flex; margin:0 0 11% 0; justify-content: center;}
+    .pro_img{position: relative;}
+    .pro_img .link{
+        text-indent: -9999px;
+
+        position: absolute;
+    }
+    .pro_img .link01{
+        left: 1%;
+        top: 86%;
+        width: 77%;
+        height: 5.5%;                
+    }
+    .pro_img .link02{
+        left: 11%;
+        top: 94.5%;
+        width: 77.5%;
+        height: 5.5%;                
+    }
+    .pro_img .link03{
+        left: 22.5%;
+        top: 80.5%;
+        width: 77%;
+        height: 5.5%;                
+    }       
+    .pro_img .txt{
+        position:absolute;
+        left:50%;
+        top:98%;
+        transform:translate(-50%,-50%);
+        width:100%;
+        box-sizing: border-box;
+        padding:0 4%;
+        font-size:0.39vw;
+    }
+    .pro_img .txt2{
+        left:50%;
+        top:106%;
+        padding:0 0 0 15%;                
+    }
+    .pro_img .txt3{
+        left:50%;
+        top:93%;
+        padding:0 0 0 27%;
+    }                        
+    .pro_img .txt h3{
+        font-size:calc(24em / 7.5);
+        font-weight:600;
+        text-align: left;
+        line-height:calc(10em / 7.5);
+        letter-spacing: 0;
+    }
+    .pro_img .txt p{
+        font-size:calc(19em / 7.5);
+        font-weight:500;
+        text-align: left;
+        line-height:calc(10em / 7.5);
+        letter-spacing: 0;
+        padding:1% 0 0 0;
+    }        
+
+
+    .line_01{position: relative;}
+
+    .line_01 strong{
+        display:block;
+        font-size: 1rem;
+        font-weight: 600; 
+        line-height:2rem;
+        text-align: center;           
+        background:#61484a;
+        color:#fff;
+        padding:0.4% 0;
+        letter-spacing: 5px;
+    }
+    .line_02 strong{background:#2c3242;}
+    .line_03 strong{background:#000000;}
+    
+    
+    .lines_tit{margin:5rem 0 1rem 0;}
+    .lines_tit h4{
+        font-size:2.6rem;
+        font-weight:600;
+        text-align: center;
+        line-height:3rem;
+        letter-spacing: 0px;                
+    }
+    .lines_tit p{
+        font-size:1.4rem;
+        font-weight:500;
+        text-align: center;
+        line-height:3rem;
+        letter-spacing: -1px;
+    }            
+    .nav_btn a p {text-indent: -9999px;}
+
+.pc{display:block;}
+.mo{display:none;}
+
+    @media(max-width:780px){
+        .pc{display:none;}
+        .mo{display:block;}            
+        .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+        .contents01_line{font-size:1vw;}
+        .pro_img .txt{font-size:1vw;}
+
+        .video_wrap{
+            padding-top:177.75%;
+        }
+
+
+        .main_banner_txt{
+            margin:calc(90em / 7.5) auto calc(110em / 7.5) auto;
+            padding:0 calc(20em / 7.5);
+        }
+        .main_banner_txt_last{
+            margin:calc(55em / 7.5) auto calc(50em / 7.5) auto;
+        }
+
+        .main_banner_txt h1{
+            font-size:calc(44em / 7.5);
+            line-height:calc(10em / 7.5);
+        }
+        .main_banner_txt p{
+            font-size:calc(22em / 7.5);
+            padding:calc(8em / 7.5) 0 calc(20em / 7.5) 0;
+            line-height: calc(11em / 7.5);
+            letter-spacing: -1px;
+        }
+        .main_banner_txt h1 em{
+            display:block;
+        }
+
+        .main_banner_txt p em{
+            display:block;
+        }
+
+        .main_banner_txt span{
+            font-size:calc(24em / 7.5);
+            line-height: calc(10em / 7.5);
+        }              
+
+        .main_banner_txt .main_banner_btn a{
+            font-size:calc(27em / 7.5);
+            padding:calc(6.3em / 7.5) calc(14.5em / 7.5);
+        }
+        .bot_banner_list{
+            flex-wrap: wrap;
+        }
+        .with_txt h2{
+            font-size:calc(56em / 7.5);
+        }
+
+        .with_txt p{
+            font-size:calc(28em / 7.5);
+            padding-top:calc(5em / 7.5);
+        }
+
+        .bot_banner_wrap{
+            padding:0 calc(30em / 7.5) calc(30em / 7.5) calc(30em / 7.5);
+        }
+
+
+        .contents01_line{
+            margin:calc(4em / 7.5) auto calc(40em / 7.5) auto;
+        }
+
+        .contents01_line h2{
+            font-size:calc(40em / 7.5);
+            line-height:calc(10em / 7.5);
+        }          
+
+        .contents01_line h2::before{
+            left:-27%;
+        }
+
+        .contents01_line h2::after{
+            left:127%;
+        }            
+        .nav_list{
+            display:block; 
+            margin:0 0 0 0;
+        }
+
+        .pro_img .link01{
+            left: 33.5%;
+            top: 72%;
+            width: 66%;
+            height: 6.5%;           
+        }
+        .pro_img .link02{
+            left: 1%;
+            top: 76.5%;
+            width: 65.5%;
+            height: 6%;             
+        }
+        .pro_img .link03{
+            left: 24.5%;
+            top: 75.5%;
+            width: 66%;
+            height: 6%;
+        }       
+
+        .pro_img .txt{
+            position:inherit;
+            left:inherit;
+            top:inherit;
+            transform:inherit;
+            width:100%;
+            box-sizing: border-box;
+            padding:4% 4% 8% 40%;
+        }
+        .pro_img .txt2{
+            left:inherit;
+            top:inherit;
+            padding:4% 22% 8% 6%;
+        }
+        .pro_img .txt3{
+            left:inherit;
+            top:inherit;
+            padding:4% 10% 8% 31%;
+        }                        
+        .pro_img .txt h3{
+            font-size:calc(28em / 7.5);
+            line-height:calc(10em / 7.5);
+        }
+        .pro_img .txt p{
+            font-size:calc(24em / 7.5);
+            line-height:calc(10em / 7.5);
+        }      
+
+        .line_01 strong{
+            font-size: calc(16em / 7.5);
+            line-height:calc(21em / 7.5);
+            padding:0;
+        }           
+        
+        .lines_tit{margin:calc(40em / 7.5) 0 calc(30em / 7.5) 0;}
+
+        .lines_tit h4{
+            font-size:calc(44em / 7.5);
+            line-height:calc(10em / 7.5);        
+        }
+        .lines_tit p{
+            font-size:calc(22em / 7.5);
+            line-height:calc(10em / 7.5);
+        }                    
+    }
+</style>
+
+<body>
+    <div class="contents">
+        <div class="video">
+        <div class="video_wrap">
+        <video autoplay="" class="pc" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250807_Fenty%7E25AW_SP_Fenty-Avanti-LS_Aug_16x9_1080%E2%80%8A%C3%97%E2%80%8A1920_30s.mp4" id="video" loop="" muted="" playsinline="" preload="none" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250807_Fenty%7E25AW_SP_Fenty-Avanti-LS_Aug_16x9_1080%E2%80%8A%C3%97%E2%80%8A1920_30s.mp4"><!--pc 비디오--></video>
+        
+        <video autoplay="" class="mo" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250807_Fenty%7E25AW_SP_Fenty-Avanti-LS_Aug_4x5_1080x1350_30s.mp4" id="video" loop="" muted="" playsinline="" preload="none" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250807_Fenty%7E25AW_SP_Fenty-Avanti-LS_Aug_4x5_1080x1350_30s.mp4"><!--mobile 비디오--></video>
+        </div>
+        </div>
+        
+        <div class="main_banner_txt">
+        <h1>FENTY × PUMA</h1>
+        <!-- 텍스트(타이틀) -->
+        <p>새롭게 돌아온 리한나의 최신 컬렉션을 만나보세요. </br></br>클래식한 풋볼 아이템에 리한나만의 감각을 더해 완성한 이번 컬렉션은</br> 일상 속 모든 순간을 더욱 스타일리시하게 만들어줍니다.</p>
+        </div>
+        </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>
