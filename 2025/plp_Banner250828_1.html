@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">
+    /*공통 css*/
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+        img{max-width:100%; width:100%; display:block;}
+        div{line-height:1.5;}
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .pc{display:block;}
+        .mo{display:none;}
+
+        .pc_space{display:block;}
+        .mo_space{display:none;}       
+        
+        .kop-overlap-container{display:none !important;}
+    /*공통 css*/
+
+        .main_banner_txt{
+            position: relative;
+            text-align: center;
+            max-width:900px;
+            margin:6.5rem auto 2rem auto;
+            color:#111;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt_last{ margin-bottom:0;}
+
+        .main_banner_txt h1{
+            font-size:2.8rem;
+            font-weight:600;
+            line-height:2.8rem;
+        }
+        .main_banner_txt p{
+            font-size:1.4rem;
+            font-weight:500;
+            line-height:2.4rem;
+            padding:2.9rem 0 4rem 0;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt p em{display:none; text-indent: -99999px;}
+
+        .main_banner_txt p span{
+            display:block;
+            font-size:1.3rem;
+            font-weight:600;
+            margin:0;
+            padding:8% 0 0 0;
+        }
+
+        .main_banner_txt .main_banner_btn a{
+            display:inline-block;
+            font-size:1rem;
+            color:#fff;
+            font-weight:400;
+            padding:0.8rem 1.8rem;
+            background:#111;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .main_banner_txt .main_banner_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.bl a{
+            background:#111;
+            color:#fff;
+        }
+
+        .main_banner_txt .main_banner_btn.bl a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.wh a{
+            background:#fff;
+            color:#111;
+        }
+
+        .main_banner_txt .main_banner_btn.wh a:hover{
+            background:rgba(255,255,255,0.8);
+        }
+
+        .video_wrap2 {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1920 / 820;
+        }
+
+        .video_wrap2 video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }        
+
+        @media(max-width:780px){
+            /*공통 css*/
+            .pc{display:none !important;}
+            .mo{display:block !important;}
+            .pc_space{display:none !important;}
+            .mo_space{display:block !important;}
+            .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+            /*공통 css*/
+
+
+            .video_wrap2{
+                aspect-ratio: 1080 / 1350;
+            }
+
+            .main_banner_txt{
+                margin:calc(90em / 7.5) auto calc(20em / 7.5) auto;
+                padding:0 calc(20em / 7.5);
+            }
+            .main_banner_txt_last{
+                margin:calc(55em / 7.5) auto calc(50em / 7.5) auto;
+            }
+
+            .main_banner_txt h1{
+                font-size:calc(44em / 7.5);
+                line-height:calc(8em / 7.5);
+            }
+
+            .main_banner_txt p{
+                font-size:calc(22em / 7.5);
+                padding:calc(8em / 7.5) 0 calc(20em / 7.5) 0;
+                line-height: calc(10em / 7.5);
+                letter-spacing: 1px;
+            }
+
+            .main_banner_txt p em{
+                display:block;
+            }
+            .main_banner_txt h1 em{
+                display:block;
+            }
+
+            .main_banner_txt p span{
+                font-size:calc(8.5em / 7.5);
+                line-height: calc(10em / 7.5);
+            }              
+
+            .main_banner_txt .main_banner_btn a{
+                font-size:calc(27em / 7.5);
+                padding:calc(6.3em / 7.5) calc(14.5em / 7.5);
+            }
+
+        }
+
+</style>
+
+<body>
+    <div class="contents">
+        <div class="video">
+            <div class="video_wrap2">
+                <video id="video" class="mo" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250828_rose%7E25AW_SP_Rose_1080x1350.mp4" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250828_rose%7E25AW_SP_Rose_1080x1350.mp4" playsinline="" autoplay="" loop="" muted="" preload="none">
+                </video>                      
+                
+                <video id="video" class="pc" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250828_rose%7Epc.mp4" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250828_rose%7Epc.mp4" playsinline="" autoplay="" loop="" muted="" preload="none">
+                </video>             
+            </div>
+        </div>        
+        
+        <div class="main_banner_txt">
+            <h1>
+                A ROSE FOR A ROSE<br class="pc_space"><br class="mo_space">
+                PUMA x ROSÉ
+            </h1>
+            <!-- 텍스트(타이틀) -->
+            <p>
+                푸마의 글로벌 앰버서더 로제가 직접 기획에 참여한<br class="mo_space"> 첫 번째 협업 컬렉션을 공개합니다.<br class="pc_space"><br class="mo_space"><br />
+
+                그녀만의 독보적인 스타일 감각과 개성을 담아낸 이번 컬렉션은<br class="pc_space"> <br class="mo_space">
+                푸마의 스포츠웨어 헤리티지를 현대적으로 재해석하고<br class="pc_space"><br class="mo_space">
+                로제 특유의 절제된 감각과 여성스러운 디테일을 더해 완성했습니다.<br class="pc_space"><br class="mo_space"><br />
+                
+                끊임없이 피어나는 장미처럼, 당신만의 진정한 스타일을<br class="mo_space"> 찾아가는 여정을 시작하세요.
+            </p>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>

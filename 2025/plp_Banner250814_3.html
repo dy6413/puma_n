@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">
+
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%; display:block;}
+
+        div{line-height:1.5;}
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .contents_03{margin:3rem 0 0 0; position: relative;}
+
+
+        .line_01 strong{
+            display:block;
+            font-size: 1rem;
+            font-weight: 600; 
+            line-height:2rem;
+            text-align: center;           
+            background:#61484a;
+            color:#fff;
+            padding:0.4% 0;
+            letter-spacing: 5px;
+        }
+
+
+        .line_03 strong{background:#2c3242;}
+        
+        
+        .lines_tit{margin:5rem 0 1rem 0;}
+        .lines_tit h4{
+            font-size:2.6rem;
+            font-weight:600;
+            text-align: center;
+            line-height:3rem;
+            letter-spacing: 0px;                
+        }
+        .lines_tit p{
+            font-size:1.4rem;
+            font-weight:500;
+            text-align: center;
+            line-height:3rem;
+            letter-spacing: -1px;
+        }            
+
+
+        .kop-overlap-container{display:none !important;}
+
+        .pc{display:block;}
+        .mo{display:none;}
+
+            @media(max-width:780px){
+                .pc{display:none;}
+                .mo{display:block;}            
+                .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+
+                .contents_03{margin:calc(40em / 7.5) 0 0 0;}
+
+                .line_01 strong{
+                    font-size: calc(20em / 7.5);
+                    line-height:calc(21em / 7.5);
+                    padding:0;
+                }           
+                
+                .lines_tit{margin:calc(40em / 7.5) 0 calc(30em / 7.5) 0;}
+
+                .lines_tit h4{
+                    font-size:calc(44em / 7.5);
+                    line-height:calc(10em / 7.5);        
+                }
+                .lines_tit p{
+                    font-size:calc(22em / 7.5);
+                    line-height:calc(10em / 7.5);
+                    letter-spacing: 0;
+                }                   
+            }
+
+            
+
+
+    </style>
+
+<body>
+    <div class="contents">
+
+        <div class="contents_rel contents_03">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage06_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage06_pc.jpg/fmt/jpg" alt=""/>
+            </picture> 
+        </div>
+
+        <div class="line_01 line_03">
+            <strong>SPEEDCAT OG</strong>
+        </div>
+
+        <div class="lines_tit">
+            <h4>스피드캣 OG</h4>
+            <p>빈티지한 분위기를 자아내는 스피드캣 아카이브</p>
+        </div>        
+
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">
+
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%; display:block;}
+        div{line-height:1.5;}
+
+        .plp_wrap{
+            position: relative;
+        }
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .contents_02{margin:3rem 0 0 0; position: relative;}
+        .contents_03{margin:3rem 0 0 0; position: relative;}
+        .contents_04{margin:3rem 0 0 0; position: relative;}
+        .contents_05{margin:3rem 0 0 0; position: relative;}
+
+        .main_banner_txt{
+            position: relative;
+            text-align: center;
+            max-width:900px;
+            margin:2.5rem auto 4rem auto;
+            color:#111;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt_last{ margin-bottom:0;}
+
+        .main_banner_txt h1{
+            font-size:2.8rem;
+            font-weight:600;
+            line-height:2.8rem;
+        }
+        .main_banner_txt p{
+            font-size:1.4rem;
+            font-weight:500;
+            line-height:2.4rem;
+            padding:0.9rem 0 2rem 0;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt p em{display:none; text-indent: -99999px;}
+
+        .main_banner_txt p span{
+            display:block;
+            font-size:1.3rem;
+            font-weight:600;
+            margin:0;
+            padding:8% 0 0 0;
+        }
+
+        .main_banner_txt .main_banner_btn a{
+            display:inline-block;
+            font-size:1rem;
+            color:#fff;
+            font-weight:400;
+            padding:0.8rem 1.8rem;
+            background:#111;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .main_banner_txt .main_banner_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.bl a{
+            background:#111;
+            color:#fff;
+        }
+
+        .main_banner_txt .main_banner_btn.bl a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.wh a{
+            background:#fff;
+            color:#111;
+        }
+
+        .main_banner_txt .main_banner_btn.wh a:hover{
+            background:rgba(255,255,255,0.8);
+        }
+
+        .kop-overlap-container{display:none !important;}
+
+        .video_wrap {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1920 / 820;
+        }
+
+        .video_wrap video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }        
+
+
+        .nav_list{display:flex; margin:0 0 6% 0; justify-content: center; gap:0 0.5%;}
+        .pro_img{position: relative;}
+        .pro_img .link{
+            text-indent: -9999px;
+
+            position: absolute;
+        }
+        .pro_img .link01{
+            left: 0%;
+            top: 82%;
+            width: 100%;
+            height: 7.5%;               
+        }
+        .pro_img .link02{
+            left: 0%;
+            top: 82%;
+            width: 100%;
+            height: 7.5%;            
+        }
+        .pro_img .link03{
+            left: 0%;
+            top: 82%;
+            width: 100%;
+            height: 7.5%;               
+        }       
+        .pro_img .link04{
+            left: 0%;
+            top: 82%;
+            width: 100%;
+            height: 7.5%;            
+        }      
+
+        .pro_img .txt{
+            width:100%;
+            box-sizing: border-box;
+            padding:3% 0 0 0;
+            font-size:0.39vw;
+            text-align: left;
+        }
+
+
+        .pro_img .txt h3{
+            font-size:calc(22em / 7.5);
+            font-weight:600;
+            text-align: left;
+            line-height:calc(10em / 7.5);
+            letter-spacing: 0;
+        }
+        .pro_img .txt p{
+            font-size:calc(16em / 7.5);
+            font-weight:500;
+            text-align: left;
+            line-height:calc(10em / 7.5);
+            letter-spacing: 0;
+            padding:1% 0 0 0;
+        }        
+
+        .nav_btn a p {text-indent: -9999px; font-size:0;}
+
+        .pc{display:block;}
+        .mo{display:none;}
+
+            @media(max-width:780px){
+                .pc{display:none;}
+                .mo{display:block;}            
+                .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+                .contents_02{margin:calc(40em / 7.5) 0 0 0;}
+                .contents_03{margin:calc(40em / 7.5) 0 0 0;}
+                .contents_04{margin:calc(40em / 7.5) 0 0 0;}
+                .contents_05{margin:calc(40em / 7.5) 0 0 0;}
+
+                .video_wrap{
+                    aspect-ratio: 780 / 820;
+                }
+
+                .main_banner_txt{
+                    margin:calc(50em / 7.5) auto calc(80em / 7.5) auto;
+                    padding:0 calc(20em / 7.5);
+                }
+                .main_banner_txt_last{
+                    margin:calc(55em / 7.5) auto calc(50em / 7.5) auto;
+                }
+
+                .main_banner_txt h1{
+                    font-size:calc(44em / 7.5);
+                    line-height:calc(10em / 7.5);
+                }
+                .main_banner_txt p{
+                    font-size:calc(22em / 7.5);
+                    padding:calc(8em / 7.5) 0 calc(10em / 7.5) 0;
+                    line-height: calc(11em / 7.5);
+                    letter-spacing: 1px;
+                }
+                .main_banner_txt p em{
+                    display:block;
+                    line-height:0;
+                }
+                .main_banner_txt h1 em{
+                    display:block;
+                }
+
+                .main_banner_txt p span{
+                    font-size:calc(8.5em / 7.5);
+                    line-height: calc(10em / 7.5);
+                }              
+
+                .main_banner_txt .main_banner_btn a{
+                    font-size:calc(27em / 7.5);
+                    padding:calc(6.3em / 7.5) calc(14.5em / 7.5);
+                }
+                .bot_banner_list{
+                    flex-wrap: wrap;
+                }
+                .with_txt h2{
+                    font-size:calc(56em / 7.5);
+                }
+
+                .with_txt p{
+                    font-size:calc(28em / 7.5);
+                    padding-top:calc(5em / 7.5);
+                }
+
+                .bot_banner_wrap{
+                    padding:0 calc(30em / 7.5) calc(30em / 7.5) calc(30em / 7.5);
+                }
+
+                .nav_list{
+                    margin: 0 0 12% 0;
+                    flex-wrap: wrap;
+                    gap: 0 2.5%;
+                }
+
+                .pro_img{
+                    width:45.5%;
+                    padding-bottom:7%;
+                }
+
+                .pro_img .link01{
+                    left: 0;
+                    top: 68%;
+                    width: 100%;
+                    height: 10.5%;          
+                }
+                .pro_img .link02{
+                    left: 0;
+                    top: 68%;
+                    width: 100%;
+                    height: 10.5%;          
+                }
+                .pro_img .link03{
+                    left: 0;
+                    top: 68%;
+                    width: 100%;
+                    height: 10.5%;   
+                }       
+
+                .pro_img .link04{
+                    left: 0;
+                    top: 68%;
+                    width: 100%;
+                    height: 10.5%;   
+                }                     
+
+                .pro_img .txt{
+                    font-size:1vw;
+                    padding:5% 0 0 0;
+                }
+
+                .pro_img .txt h3{
+                    font-size:calc(28em / 7.5);
+                    line-height:calc(10em / 7.5);
+                    text-align:center;
+                }
+                .pro_img .txt p{
+                    font-size:calc(24em / 7.5);
+                    line-height:calc(10em / 7.5);
+                    display:none;
+                }      
+                
+            }
+
+    </style>
+
+<body>
+    <div class="contents">
+        <div class="video">
+            <div class="video_wrap">
+                <video id="video" class="mo" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7E780x820.mp4" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7E780x820.mp4" playsinline="" autoplay="" loop="" muted="" preload="none">
+                </video>      
+                
+                <video id="video" class="pc" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7E1920x820.mp4" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7E1920x820.mp4" playsinline="" autoplay="" loop="" muted="" preload="none">
+                </video>             
+            </div>
+        </div>        
+        
+        <div class="main_banner_txt">
+            <h1>스피드캣 컬렉션</h1>
+            <p>
+                푸마의 아이코닉 스니커즈 스피드캣의<em>space</em> 다양한 스타일을 지금 만나보세요.
+            </p>
+            <div class="main_banner_btn bl">
+                <a href="https://kr.puma.com/kr/ko/%EC%BB%AC%EB%A0%89%EC%85%98/%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC/%EC%8A%A4%ED%94%BC%EB%93%9C%EC%BA%A3">컬렉션 바로가기</a>
+            </div>
+        </div>
+
+        <div class="contents_rel contents_01">
+            <div class="nav_list">
+                <div class="pro_img">
+                    <picture>
+                        <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage01_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage01_pc.jpg/fmt/jpg" alt=""/>
+                    </picture>   
+                    <div class="nav_btn">
+                        <!--1번 링크-->
+                        <a href="https://kr.puma.com/kr/ko/pd/%EC%8A%A4%ED%94%BC%EB%93%9C%EC%BA%A3-%EB%A9%94%ED%83%88%EB%A6%AD-%3Cbr%3Espeedcat-metallic/4069156985810.html" class="link01 link"><p>바로가기</p></a>
+                        
+                    </div>
+                    <div class="txt">
+                        <h3>스피드캣 METALLIC</h3>
+                        <P>빈티지한 분위기를 자아내는 스피드캣 아카이브</P>
+                    </div>
+                </div>
+                <div class="pro_img">
+                    <picture>
+                        <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage02_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage02_pc.jpg/fmt/jpg" alt=""/>
+                    </picture>   
+                    <div class="nav_btn">
+                        <!--2번 링크-->
+                        <a href="https://kr.puma.com/kr/ko/pd/%EC%8A%A4%ED%94%BC%EB%93%9C%EC%BA%A3-%EB%B0%9C%EB%A0%9B-sd-%EC%9A%B0%EB%A8%BC%EC%8A%A4-%3Cbr%3Espeedcat-ballet-sd-wns/401287.html?dwvar_401287_color=02" class="link02 link"><p>바로가기</p></a>
+                    </div>
+                    <div class="txt txt2">
+                        <h3>스피드캣 BALLET</h3>
+                        <P>빈티지한 분위기를 자아내는 스피드캣 아카이브</P>
+                    </div>                    
+                </div>
+                <div class="pro_img">
+                    <picture>
+                        <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage03_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage03_pc.jpg/fmt/jpg" alt=""/>
+                    </picture>   
+                    <div class="nav_btn">
+                        <!--3번 링크-->
+                        <a href="https://kr.puma.com/kr/ko/pd/%EC%8A%A4%ED%94%BC%EB%93%9C%EC%BA%A3-og-%3Cbr%3Espeedcat-og/398846.html?dwvar_398846_color=40" class="link02 link"><p>바로가기</p></a>
+                    </div>
+                    <div class="txt txt3">
+                        <h3>스피드캣 OG</h3>
+                        <P>클래식한 무드의 스피드캣 OG</P>
+                    </div>                    
+                </div>                                
+                <div class="pro_img">
+                    <picture>
+                        <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage04_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                        <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2025KR%7E250814_speedcat%7Eimage04_pc.jpg/fmt/jpg" alt=""/>
+                    </picture>   
+                    <div class="nav_btn">
+                        <!--4번 링크-->
+                        <a href="https://kr.puma.com/kr/ko/pd/%EC%8A%A4%ED%94%BC%EB%93%9C%EC%BA%A3-go-%EC%9A%B0%EB%A8%BC%EC%8A%A4-%3Cbr%3Espeedcat-go-wns/403589.html?dwvar_403589_color=04" class="link02 link"><p>바로가기</p></a>
+                    </div>
+                    <div class="txt txt3">
+                        <h3>스피드캣 GO</h3>
+                        <P>클래식한 무드의 스피드캣 GO</P>
+                    </div>                    
+                </div>                                                
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>
