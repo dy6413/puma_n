@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+</head>
+
+<style type="text/css">
+
+    /*공통 css*/
+    @import url('https://db.onlinewebfonts.com/c/62173628d2a624e236ce441c159caea9?family=FF+DIN+for+Puma+W01+Cond+Bold');
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
+
+    /* *, :after, :before{box-sizing: inherit;} */
+
+    ul, ol {
+        padding:0;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span {
+        margin: 0;
+        padding: 0;
+    }
+
+    .contents{
+        position: relative;
+    }
+    picture{
+        line-height: 0;
+        display:block;
+    }
+
+    body{
+        margin: 0;
+        font-family: Noto Sans KR, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5 !important;
+        color: #222;
+        text-align: left;
+        background-color: #fff;            
+    }
+
+    img{max-width:100%;}
+    div{line-height:1.5;}
+
+    .top_banner{position: relative;}
+    .top_banner a{display:block;}
+    .mo{display:none;}
+    .tb{display:none;}
+    .pc_space{display:block;}
+    .mo_space{display:none;}
+    .kop-overlap-container{padding-top:0 !important; display:none !important;}
+    .contents img{width:100%; margin:0 auto;}
+    .santel_sapce{padding:1rem 0;}
+    #santel_Carousel02{margin-bottom: 5rem; margin-top: 2rem;}
+    .mt-lg-4, .my-lg-4{margin-top:0 !important;}    
+    .p-meta-footer-language-flag{width: auto !important; margin:0 1rem 0 0 !important;}
+    .p-footer-featured-icon{width: auto !important; margin:0 1rem 0 0 !important;}
+    /*공통 css*/
+
+    .contents_01 {
+        padding-top: 4%;
+    }
+
+    .video{
+        position:absolute;
+        left:50%;
+        top:33.23%;
+        transform: translate(-50%,-50%);
+        width:31.27%;
+    }
+
+    .video_wrap{
+        position:relative;
+        padding-top:125%;
+        width:100%;
+        height:0;      
+    }
+
+    .video_wrap video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .contents .link{
+        text-indent: -9999px;
+        position: absolute;
+        cursor: pointer;
+    }
+    .contents .link01{
+        left: 30.73%;
+        top: 18.1%;
+        width: 6.88%;
+        height: 0.58%;              
+    }    
+
+    .contents .link02{
+        left: 86.51%;
+        top: 65.15%;
+        width: 6.88%;
+        height: 0.58%;           
+    }    
+    
+    .contents .link03{
+        left: 30.73%;
+        top: 87.92%;
+        width: 6.88%;
+        height: 0.58%;                 
+    }
+
+    @media(max-width:780px){
+        /*공통 css*/
+        .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+        .products-carousel-glide{padding-bottom:1rem;} 
+        .pc_space{display:none !important;}
+        .mo_space{display:block !important;}    
+        .pc{display:none !important;}        
+        .mo{display:block !important;}
+        .tb{display:none !important;}        
+        /*공통 css*/
+
+        .contents_01 {
+            padding-top: 0;
+        }
+
+        .video{
+            width:82.05%;
+            top:29.39%;
+        }
+
+        .video_wrap{
+            padding-top:177.65%;
+        }
+
+        .contents .link01{
+            left: 67.9%;
+            top: 9.4%;
+            width: 20.51%;
+            height: 0.45%;            
+        }    
+
+        .contents .link02{
+            left: 69.42%;
+            top: 57.46%;
+            width: 20.51%;
+            height: 0.45%;            
+        }       
+        
+        .contents .link03{
+            left: 74.9%;
+            top: 79.28%;
+            width: 20.51%;
+            height: 0.45%;            
+        }
+    }  
+
+
+</style>
+
+
+<body>
+
+
+    <div class="contents">
+        <div class="contents contents_01">
+            <picture>
+                <source data-device="mobile" media="(max-width: 780px)" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E260101_tackle%7Eimage02_mo.jpg" />
+                <img alt="" loding="lazy" src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E260101_tackle%7Eimage02_pc.jpg" />
+            </picture>
+            <div class="video">
+                <div class="video_wrap pc_space">
+                    <video id="video" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E0101_tackle%7Etackle_video_pc.mp4" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E0101_tackle%7Etackle_video_pc.mp4" playsinline="" autoplay="" loop="" muted="" preload="none">
+                    </video>             
+                </div>
+                <div class="video_wrap mo_space">
+                    <video id="video" src="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E0101_tackle%7Etackle_video_mo.mp4" data-url="https://videos.puma.net/videos/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E0101_tackle%7Etackle_video_mo.mp4" playsinline="" autoplay="" loop="" muted="" preload="none">
+                    </video>             
+                </div>
+            </div>    
+            <a class="link01 link" href="https://kr.puma.com/kr/ko/pd/%ED%91%B8%EB%A7%88-%ED%83%9C%ED%81%B4-%3Cbr%3Epuma-tackle/4069161560095.html">Tackle Clyde Royal 구매하기</a>    
+            <a class="link02 link" href="https://kr.puma.com/kr/ko/pd/%ED%91%B8%EB%A7%88-%ED%83%9C%ED%81%B4-%3Cbr%3Epuma-tackle/4069161552700.html">Tackle PUMA Black 구매하기</a>
+            <a class="link03 link" href="https://kr.puma.com/kr/ko/pd/%ED%91%B8%EB%A7%88-%ED%83%9C%ED%81%B4-%3Cbr%3Epuma-tackle/4069161561054.html">Tackle Alpine Snow 구매하기</a>
+        </div>                                                        
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>
