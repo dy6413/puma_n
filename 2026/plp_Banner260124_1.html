@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+</head>
+
+<style type="text/css">
+
+    /*공통 css*/
+    @import url('https://db.onlinewebfonts.com/c/62173628d2a624e236ce441c159caea9?family=FF+DIN+for+Puma+W01+Cond+Bold');
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+    
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 100;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 300;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 400;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 700;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');}
+    @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format('woff2'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format('woff'),url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format('opentype');}
+
+    /* *, :after, :before{box-sizing: inherit;} */
+
+    ul, ol {
+        padding:0;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span {
+        margin: 0;
+        padding: 0;
+    }
+
+    .contents{
+        position: relative;
+    }
+    picture{
+        line-height: 0;
+        display:block;
+    }
+
+    body{
+        margin: 0;
+        font-family: Noto Sans KR, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5 !important;
+        color: #222;
+        text-align: left;
+        background-color: #fff;            
+    }
+
+    img{max-width:100%;}
+    div{line-height:1.5;}
+
+    .top_banner{position: relative;}
+    .top_banner a{display:block;}
+    .mo{display:none;}
+    .tb{display:none;}
+    .pc_space{display:block;}
+    .mo_space{display:none;}
+    .kop-overlap-container{padding-top:0 !important; display:none !important;}
+    .contents img{width:100%; margin:0 auto;}
+    .santel_sapce{padding:1rem 0;}
+    #santel_Carousel02{margin-bottom: 5rem; margin-top: 2rem;}
+    .mt-lg-4, .my-lg-4{margin-top:0 !important;}    
+    .p-meta-footer-language-flag{width: auto !important; margin:0 1rem 0 0 !important;}
+    .p-footer-featured-icon{width: auto !important; margin:0 1rem 0 0 !important;}
+    /*공통 css*/
+
+    .main_wrap{
+        position: relative;
+    }
+
+    .main_banner_wrap{
+        position: relative;
+    }
+
+    .main_banner_txt{
+        position: relative;
+        text-align: center;
+        max-width:1200px;
+        margin:2.5rem auto 6rem auto;
+        color:#111;
+        word-break: keep-all;
+    }
+
+    .main_banner_wrap2 .main_banner_txt{
+        margin:2.5rem auto 2rem auto;
+    }    
+
+    .main_banner_txt2{
+        margin:2.5rem auto 6rem auto;
+    }
+
+    .main_banner_txt_last{ margin-bottom:0;}
+
+    .main_banner_txt h1{
+        font-size:2.5rem;
+        font-weight:600;
+        line-height:3rem;
+    }
+
+    .main_banner_txt2 strong{
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 2rem;
+        padding: 1rem 0 0.5rem 0;
+    }
+
+    .main_banner_txt p{
+        font-size:1.1rem;
+        font-weight:500;
+        line-height:1.8rem;
+        padding:0.7rem 0 1.9rem 0;
+    }
+
+    .main_banner_txt2 p{
+        font-size:1.1rem;
+        font-weight:500;
+        line-height:1.8rem;
+        padding:0.5rem 0 1.9rem 0;
+    }
+
+    .main_banner_txt span{
+        display:block;
+        font-size:0.9rem;
+        font-weight:400;
+        line-height:1.8rem;
+        padding:0.9rem 0 2rem 0;
+    }    
+
+    .main_banner_with_btn{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_banner_txt .main_banner_with_btn .main_banner_btns, .main_banner_txt .main_banner_with_btn .main_banner_btns2{
+        width:15%;
+    }
+
+    .main_banner_txt .main_banner_with_btn .main_banner_btns a, .main_banner_txt .main_banner_with_btn .main_banner_btns2 a{
+        padding:6.2% 0;
+    }
+
+    .main_banner_txt .main_banner_btns{position: relative;}
+    .main_banner_txt .main_banner_btns2{margin-left:1%;}
+    .main_banner_txt .main_banner_btns a{
+        display: inline-block;
+        font-size: 1rem;
+        color: #fff;
+        font-weight: 400;
+        padding: 1.2% 0;
+        background: #111;
+        text-decoration: none;
+        transition: all 0.2s;
+        max-width: 180px;
+        width: 100%;
+    }
+
+    .main_banner_txt .main_banner_btns a:hover{
+        background:rgba(0,0,0,0.8);
+    }
+
+    .main_banner_txt .main_banner_btns.bl a{
+        background:#111;
+        color:#fff;
+    }
+
+    .main_banner_txt .main_banner_btns.bl a:hover{
+        background:rgba(0,0,0,0.8);
+    }
+
+    .main_banner_txt .main_banner_btns.wh a{
+        background:#fff;
+        color:#111;
+    }
+
+    .main_banner_txt .main_banner_btns.wh a:hover{
+        background:rgba(255,255,255,0.8);
+    }
+
+    .main_banner_txt .main_banner_btns2 a{
+        display: inline-block;
+        font-size: 1rem;
+        color: #fff;
+        font-weight: 400;
+        padding: 1.2% 0;
+        background: #111;
+        text-decoration: none;
+        transition: all 0.2s;
+        max-width: 180px;
+        width: 100%;
+    }
+
+    .main_banner_txt .main_banner_btns2 a:hover{
+        background:rgba(0,0,0,0.8);
+    }
+
+    .main_banner_txt .main_banner_btns2.bl a{
+        background:#111;
+        color:#fff;
+    }
+
+    .main_banner_txt .main_banner_btns2.bl a:hover{
+        background:rgba(0,0,0,0.8);
+    }
+
+    .main_banner_txt .main_banner_btns2.wh a{
+        background:#fff;
+        color:#111;
+    }
+
+    .main_banner_txt .main_banner_btns2.wh a:hover{
+        background:rgba(255,255,255,0.8);
+    }
+
+    .bot_banner_wrap{
+        position: relative; 
+        padding:0rem 0 3.1rem 0;
+        max-width:1400px;
+        margin:0 auto;            
+    }
+
+    .bot_banner_list{display:flex; gap:20px;}
+    .bot_banner_list a{display:block; position: relative; text-decoration: none;}
+
+    .bot_banner_list a .with_txt{
+        position: absolute;
+        left: 50%;
+        bottom: 6%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+    }
+
+    .with_txt h2{
+        color:#fff;
+        font-size:40px;
+        line-height:40px;
+        font-weight:600;
+        margin:0;
+    }
+
+    .with_txt p{
+        color:#fff;
+        padding-top:10px;
+        font-size:18px;
+        line-height:28px;
+        font-weight:400;
+    }    
+
+
+    .video{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        width:47.5%;
+    }
+
+    .video_wrap{
+        position:relative;
+        padding-top:124.25%;
+        width:100%;
+        height:0;      
+    }
+
+    .video_wrap video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }       
+
+    .video_wrap_new {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1920 / 820;
+    }
+
+    .video_wrap_new video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }       
+
+
+    .main_banner_txt .main_banner_btn a{
+        display:inline-block;
+        font-size:1rem;
+        color:#fff;
+        font-weight:400;
+        padding:0.8rem 1.8rem;
+        background:#111;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .main_banner_txt .main_banner_btn a:hover{
+        background:rgba(0,0,0,0.8);
+    }
+
+    .main_banner_txt .main_banner_btn.bl a{
+        background:#111;
+        color:#fff;
+    }
+
+    .main_banner_txt .main_banner_btn.bl a:hover{
+        background:rgba(0,0,0,0.8);
+    }
+
+    .main_banner_txt .main_banner_btn.wh a{
+        background:#fff;
+        color:#111;
+    }
+
+    .main_banner_txt .main_banner_btn.wh a:hover{
+        background:rgba(255,255,255,0.8);
+    }
+
+
+    @media(max-width:1024px){
+        .top_banner.pc{display:none;}
+        .tb{display:block;}
+        .bot_banner_list{
+            gap:10px;
+        }
+        .bot_banner_wrap{
+            padding:0 1.5rem 1.5rem 1.5rem;
+        }
+        .with_txt h2{
+            font-size:32px;
+            font-weight:500;
+        }
+    }    
+
+    @media(max-width:780px){
+        /*공통 css*/
+        .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+        .products-carousel-glide{padding-bottom:1rem;} 
+        .pc_space{display:none !important;}
+        .mo_space{display:block !important;}    
+        .pc{display:none !important;}        
+        .mo{display:block !important;}
+        .tb{display:none !important;}        
+        /*공통 css*/
+
+        .video_wrap_new{
+            aspect-ratio: 780 / 820;
+        }
+
+        .main_banner_txt{
+            margin:calc(55em / 7.5) auto calc(100em / 7.5) auto;
+            padding:0 calc(20em / 7.5);
+        }
+
+        .main_banner_wrap2 .main_banner_txt{
+            margin:calc(55em / 7.5) auto calc(40em / 7.5) auto;
+        }
+
+        .main_banner_txt2{
+            margin:calc(55em / 7.5) auto calc(100em / 7.5) auto;
+            padding:0 calc(20em / 7.5);
+        }        
+
+        .main_banner_txt_last{
+            margin:calc(55em / 7.5) auto calc(50em / 7.5) auto;
+        }
+
+        .main_banner_txt h1{
+            font-size:calc(46em / 7.5);
+            line-height: calc(8em / 7.5);
+        }
+
+        .main_banner_txt2 strong{
+            font-size:calc(26em / 7.5);
+            padding:calc(5em / 7.5) 0 calc(2em / 7.5) 0;
+            line-height:calc(10em / 7.5);
+        }        
+
+        .main_banner_txt p{
+            font-size:calc(26em / 7.5);
+            padding:calc(8em / 7.5) 0 calc(11em / 7.5) 0;
+            line-height: calc(10em / 7.5);
+        }
+
+        .main_banner_txt span{
+            font-size:calc(20em / 7.5);
+            padding:calc(3em / 7.5) 0 calc(15em / 7.5) 0;
+            line-height:calc(10em / 7.5);
+        }
+        
+
+        .main_banner_txt .main_banner_btn a{
+            font-size:calc(27em / 7.5);
+            padding:calc(6.3em / 7.5) calc(14.5em / 7.5);
+        }        
+
+        .with_txt .main_with_btn{
+            margin:calc(30em / 7.5) 0 0 0;
+        }        
+
+        .main_banner_with_btn{
+            display:inherit;
+        }
+
+        .main_banner_txt .main_banner_with_btn .main_banner_btns, .main_banner_txt .main_banner_with_btn .main_banner_btns2{
+            width:100%;
+        }
+
+        .main_banner_txt .main_banner_with_btn .main_banner_btns a, .main_banner_txt .main_banner_with_btn .main_banner_btns2 a{
+            padding:calc(5em / 7.5) 0;
+        }        
+
+        .main_banner_txt .main_banner_btns2{margin-left:0; padding-top:calc(20em / 7.5);}
+        
+        .main_banner_txt .main_banner_btns a{
+            font-size:calc(27em / 7.5);
+            padding:calc(5em / 7.5) 0;
+            max-width:42%;
+        }
+
+        .main_banner_txt .main_banner_btns2 a{
+            font-size:calc(27em / 7.5);
+            padding:calc(5em / 7.5) 0;
+            max-width:42%;
+        }    
+        
+        .video_wrap_new{
+            aspect-ratio: 1080 / 1350;
+        }
+
+        .bot_banner_list{
+            flex-wrap: wrap;
+        }
+        .with_txt h2{
+            font-size:calc(56em / 7.5);
+        }
+
+        .with_txt p{
+            font-size:calc(28em / 7.5);
+            padding-top:calc(5em / 7.5);
+        }
+
+        .bot_banner_wrap{
+            padding:0 calc(30em / 7.5) calc(30em / 7.5) calc(30em / 7.5);
+        }        
+
+        .bot_banner_list.mo{
+            display:flex;
+            gap:calc(20em / 7.5);
+        }        
+        .products-carousel-glide{padding-bottom:1rem;}
+
+    }  
+
+
+</style>
+
+
+<body>
+
+
+    <div class="contents">
+        <div class="main_wrap">
+            <div class="main_banner_wrap main_banner_wrap2">
+                <picture>
+                    <source data-device="mobile" media="(max-width: 780px)" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E260123_Nitro4%7Eimage01_mo.jpg/fmt/jpg" />
+                    <img alt="" loding="lazy" src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E260123_Nitro4%7Eimage01_pc.jpg/fmt/jpg" />
+                </picture>
+                <div class="main_banner_txt">
+                    <h1>
+                        RUN YOUR REASON
+                        <!-- <br class="pc_space"><br class="mo_space"> -->
+                    </h1>
+                    
+                    <p>
+                        달리는 이유는 모두 다릅니다.<br class="pc_space"><br class="mo_space">
+                        기록을 위해서든, 리듬을 찾기 위해서든,<br class="pc_space"><br class="mo_space">
+                        혹은 오늘을 버텨내기 위해서든. 어떤 이유든 상관없습니다.<br class="pc_space"><br class="mo_space">
+                        당신이 달리는 순간, 그 이유는 이미 충분합니다.
+                    </p>
+
+                    <div class="main_banner_btn bl">
+                        <a href="https://kr.puma.com/kr/ko/go-wild">GO WILD 더 알아보기</a>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>

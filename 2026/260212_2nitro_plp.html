@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+</head>
+
+<style type="text/css">
+
+        ul, ol {
+            padding:0;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            span {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 0;
+            font-family: Noto Sans KR, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5 !important;
+            color: #222;
+            text-align: left;
+            background-color: #fff;            
+        }
+
+
+        img{max-width:100%; width:100%; display:block;}
+        div{line-height:1.5;}
+
+        .plp_wrap{
+            position: relative;
+        }
+
+        .mt-lg-4, .my-lg-4{margin-top:0 !important;}
+
+        .contents_01{margin:3rem 0 0 0; position: relative;}
+
+        .main_banner_txt{
+            position: relative;
+            text-align: center;
+            max-width:900px;
+            margin:6.5rem auto 2rem auto;
+            color:#111;
+            word-break: keep-all;
+        }
+
+        .main_banner_txt_last{ margin-bottom:0;}
+
+        .main_banner_txt h1{
+            font-size:2.8rem;
+            font-weight:600;
+            line-height:2.8rem;
+        }
+
+        .main_banner_txt p em{display:none; text-indent: -99999px;}
+
+        .main_banner_txt p span{
+            display:block;
+            font-size:1.3rem;
+            font-weight:600;
+            margin:0;
+            padding:8% 0 0 0;
+        }
+
+        .main_banner_txt .main_banner_btn a{
+            display:inline-block;
+            font-size:1rem;
+            color:#fff;
+            font-weight:400;
+            padding:0.8rem 1.8rem;
+            background:#111;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .main_banner_txt .main_banner_btn a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.bl a{
+            background:#111;
+            color:#fff;
+        }
+
+        .main_banner_txt .main_banner_btn.bl a:hover{
+            background:rgba(0,0,0,0.8);
+        }
+
+        .main_banner_txt .main_banner_btn.wh a{
+            background:#fff;
+            color:#111;
+        }
+
+        .main_banner_txt .main_banner_btn.wh a:hover{
+            background:rgba(255,255,255,0.8);
+        }
+
+        .kop-overlap-container{display:none !important;}
+
+        .pc{display:block;}
+        .mo{display:none;}
+
+        @media(max-width:780px){
+            .pc{display:none;}
+            .mo{display:block;}            
+            .contents{font-size:1vw; line-height:calc(10em / 7.5);}
+            .contents_01{
+                margin:calc(40em / 7.5) auto 0 auto;
+            }
+        }
+
+    </style>
+
+<body>
+    <div class="contents">
+
+        <div class="contents_rel contents_01">
+            <picture>
+                <source data-device="mobile" srcset="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E260212_nitro%7Eimage02_mo.jpg/fmt/jpg" media="(max-width: 780px)" >
+                <img src="https://images.puma.net/images/fn/%7Eregional%7EKOR%7Eothers%7E2026KR%7E260212_nitro%7Eimage02_pc.jpg/fmt/jpg" alt=""/>
+            </picture>   
+        </div>     
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+    // $('#video').on('click', function(){
+
+    //     $('#btn_player').addClass('on');
+    // });
+
+    const video = document.getElementById('video');
+    const videowrap = document.querySelectorAll('video_wrap');
+    const videoContraol = document.getElementById('btn_player');
+
+
+    video.addEventListener('click', function(){
+        videoContraol.classList.add('on');
+        video.pause();
+    });
+
+    $("#btn_player").click(function(e){
+        if(video.paused==true){
+            video.play(); //재생
+            videoContraol.classList.remove('on');
+        }else{
+            video.pause(); //일시정지
+            
+        }
+    });
+
+
+</script>
+
+</html>
